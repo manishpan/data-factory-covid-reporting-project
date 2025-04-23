@@ -1,0 +1,45 @@
+{
+	"name": "ds_testing_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_covid_db",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "sql"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "country",
+				"type": "varchar"
+			},
+			{
+				"name": "country_code_2_digit",
+				"type": "varchar"
+			},
+			{
+				"name": "country_code_3_digit",
+				"type": "varchar"
+			},
+			{
+				"name": "year_week",
+				"type": "varchar"
+			},
+			{
+				"name": "week_start_date",
+				"type": "date"
+			},
+			{
+				"name": "week_end_date",
+				"type": "date"
+			}
+		],
+		"typeProperties": {
+			"schema": "covid_reporting",
+			"table": "testing"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
